@@ -1,0 +1,12 @@
+﻿Name: Login as Anybody
+AntiForgery: enabled
+Author: Lombiq
+Website: http://orchardloginasanybody.codeplex.com
+Version: 1.0
+OrchardVersion: 1.8.1
+Description: Allows administrators to log in as any user.
+Features:
+    Lombiq.LoginAsAnybody:
+        Name: Login as Anybody
+        Description: Allows administrators to log in as any user.
+        Category: Administration
