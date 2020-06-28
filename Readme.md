@@ -2,7 +2,8 @@
 
 
 
-## Project Description
+## About
+
 Orchard module for administrators to be able to log in as any user.
 
 
@@ -12,12 +13,9 @@ After enabling the module you'll see a new tab under Users. You can log in as an
 
 This feature is only available to site owners, thus it's not way to get around security.
 
-The module's source is available in two public source repositories, automatically mirrored in both directions with [Git-hg Mirror](https://githgmirror.com):
 
-- [https://bitbucket.org/Lombiq/orchard-login-as-anybody](https://bitbucket.org/Lombiq/orchard-login-as-anybody) (Mercurial repository)
-- [https://github.com/Lombiq/Orchard-Login-as-Anybody](https://github.com/Lombiq/Orchard-Login-as-Anybody) (Git repository)
+## Contributing and support
 
-Bug reports, feature requests and comments are warmly welcome, **please do so via GitHub**.
-Feel free to send pull requests too, no matter which source repository you choose for this purpose.
+Bug reports, feature requests, comments, questions, code contributions, and love letters are warmly welcome, please do so via GitHub issues and pull requests. Please adhere to our [open-source guidelines](https://lombiq.com/open-source-guidelines) while doing so.
 
-This project is developed by [Lombiq Technologies Ltd](http://lombiq.com/). Commercial-grade support is available through Lombiq.
+This project is developed by [Lombiq Technologies](https://lombiq.com/). Commercial-grade support is available through Lombiq.
