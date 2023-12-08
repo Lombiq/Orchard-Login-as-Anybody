@@ -1,0 +1,13 @@
+@using OrchardCore.Modules
+@using OrchardCore.Users.Models
+@using OrchardCore.Users.ViewModels
+@using static Lombiq.LoginAsAnybody.Constants.FeatureIds
+
+@model SummaryAdminUserViewModel
+
+@{
+    var user = Model.User as User;
+}
+
+<a asp-area="@LoginAsAnybody" asp-controller="UserSwitcher" asp-action="SwitchUser" asp-route-userId="@user.UserId"
+    class="btn btn-success btn-sm @(user.UserName == User.Identity.Name ? "disabled" : string.Empty)">@T["Log in as user"]</a>

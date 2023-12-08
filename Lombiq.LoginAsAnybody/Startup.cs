@@ -9,5 +9,5 @@ namespace Lombiq.LoginAsAnybody;
 public class Startup : StartupBase
 {
     public override void ConfigureServices(IServiceCollection services) =>
-        services.AddScoped<IDisplayDriver<User>, ImpersonationDisplayDriver>();
+        services.AddScoped<IDisplayDriver<User>, UserSwitcherDisplayDriver>();
 }

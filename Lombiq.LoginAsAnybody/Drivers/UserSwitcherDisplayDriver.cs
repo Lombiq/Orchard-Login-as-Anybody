@@ -5,9 +5,9 @@ using OrchardCore.Users.ViewModels;
 
 namespace Lombiq.LoginAsAnybody.Drivers;
 
-public class ImpersonationDisplayDriver : DisplayDriver<User>
+public class UserSwitcherDisplayDriver : DisplayDriver<User>
 {
     public override IDisplayResult Display(User model)
-        => Initialize<SummaryAdminUserViewModel>("ImpersonationButton", summaryModel => summaryModel.User = model)
+        => Initialize<SummaryAdminUserViewModel>("UserSwitcherButton", summaryModel => summaryModel.User = model)
             .Location("SummaryAdmin", "Actions:2");
 }
