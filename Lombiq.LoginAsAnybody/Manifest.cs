@@ -1,5 +1,5 @@
-﻿using OrchardCore.Modules.Manifest;
-using static Lombiq.LoginAsAnybody.FeatureIds;
+using OrchardCore.Modules.Manifest;
+using static Lombiq.LoginAsAnybody.Constants.FeatureIds;
 
 [assembly: Module(
     Name = "Lombiq Login as Anybody",
@@ -10,7 +10,7 @@ using static Lombiq.LoginAsAnybody.FeatureIds;
 )]
 
 [assembly: Feature(
-    Id = Default,
+    Id = LoginAsAnybody,
     Name = "Lombiq Login as Anybody",
     Category = "Security",
     Description = "Module that allows administrators to log in as any user.",
