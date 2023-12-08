@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**;Tests\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>Lombiq Login as Anybody for Orchard Core</Title>
+    <Authors>Lombiq Technologies</Authors>
+    <Copyright>Copyright © 2023, Lombiq Technologies Ltd.</Copyright>
+    <Description>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows administrators to log in as any user.</Description>
+    <PackageIcon>NuGetIcon.png</PackageIcon>
+    <PackageTags>OrchardCore;Lombiq;AspNetCore</PackageTags>
+    <RepositoryUrl>https://github.com/Lombiq/Orchard-Login-as-Anybody</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Lombiq/Orchard-Login-as-Anybody</PackageProjectUrl>
+    <PackageLicenseFile>License.md</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="License.md" Pack="true" PackagePath="" />
+    <None Include="NuGetIcon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.Autoroute" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.ContentFields" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Contents" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Flows" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Html" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Lists" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Liquid.Abstractions" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Markdown" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.MetaWeblog.Abstractions" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Rules.Abstractions" Version="1.7.0" />
+    <PackageReference Include="OrchardCore.Workflows" Version="1.7.0" />
+  </ItemGroup>
+	
+</Project>

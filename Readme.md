@@ -1,10 +1,9 @@
-# Login as Anybody readme
-
+# Login as Anybody
 
 
 ## About
 
-Orchard module for administrators to be able to log in as any user.
+Orchard Core module for administrators to be able to log in as any user.
 
 
 ## Documentation
