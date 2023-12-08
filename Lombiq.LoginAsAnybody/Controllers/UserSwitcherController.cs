@@ -33,9 +33,7 @@ public class UserSwitcherController : Controller
         H = htmlLocalizer;
     }
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> SwitchUser(string userId, string returnUrl = null)
+    public async Task<IActionResult> SwitchUser(string userId)
     {
         if (!await _authorizationService.AuthorizeAsync(User, StandardPermissions.SiteOwner)) return Unauthorized();
 
@@ -46,10 +44,8 @@ public class UserSwitcherController : Controller
         await _signInManager.SignOutAsync();
         await _signInManager.SignInAsync(selectedUser, isPersistent: false);
 
-        if (string.IsNullOrEmpty(returnUrl)) returnUrl = "~/";
-
         await _notifier.InformationAsync(H["Successfully logged in as {0}.", selectedUser.UserName]);
 
-        return Redirect(returnUrl);
+        return Redirect("~/");
     }
 }
