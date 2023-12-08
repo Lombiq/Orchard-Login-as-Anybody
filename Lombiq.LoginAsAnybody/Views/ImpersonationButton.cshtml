@@ -8,4 +8,4 @@
     var user = Model.User as User;
 }
 
-<a href="https://lufizhatlak.com" class="btn btn-success btn-sm @(user.UserName == User.Identity.Name ? "disabled" : string.Empty)">@T["Log in as user"]</a>
+<a class="btn btn-success btn-sm @(user.UserName == User.Identity.Name ? "disabled" : string.Empty)">@T["Log in as user"]</a>
