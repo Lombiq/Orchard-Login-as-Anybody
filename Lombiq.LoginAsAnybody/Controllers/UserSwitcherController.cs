@@ -33,11 +33,11 @@ public class UserSwitcherController : Controller
         H = htmlLocalizer;
     }
 
-    public async Task<IActionResult> SwitchUser(string userId)
+    public async Task<IActionResult> SwitchUser(string id)
     {
         if (!await _authorizationService.AuthorizeAsync(User, StandardPermissions.SiteOwner)) return Unauthorized();
 
-        var selectedUser = await _userManager.FindByIdAsync(userId);
+        var selectedUser = await _userManager.FindByIdAsync(id);
 
         if (selectedUser == null) return NotFound();
 

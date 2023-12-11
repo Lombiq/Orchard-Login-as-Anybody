@@ -4,6 +4,8 @@ using Lombiq.LoginAsAnybody.Drivers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using OrchardCore.Admin;
 using OrchardCore.DisplayManagement.Handlers;
 using OrchardCore.Modules;
 using OrchardCore.Mvc.Core.Utilities;
@@ -14,6 +16,10 @@ namespace Lombiq.LoginAsAnybody;
 
 public class Startup : StartupBase
 {
+    private readonly AdminOptions _adminOptions;
+
+    public Startup(IOptions<AdminOptions> adminOptions) => _adminOptions = adminOptions.Value;
+
     public override void ConfigureServices(IServiceCollection services) =>
         services.AddScoped<IDisplayDriver<User>, UserSwitcherDisplayDriver>();
 
@@ -24,7 +30,7 @@ public class Startup : StartupBase
             routes.MapAreaControllerRoute(
                 name: "UserSwitcher",
                 areaName: FeatureIds.LoginAsAnybody,
-                pattern: "UserSwitcher/SwitchUser",
+                pattern: _adminOptions.AdminUrlPrefix + "/Users/SwitchUser/{id}",
                 defaults: new
                 {
                     controller = typeof(UserSwitcherController).ControllerName(),
