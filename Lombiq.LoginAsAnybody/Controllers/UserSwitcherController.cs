@@ -44,7 +44,7 @@ public class UserSwitcherController : Controller
         await _signInManager.SignOutAsync();
         await _signInManager.SignInAsync(selectedUser, isPersistent: false);
 
-        await _notifier.InformationAsync(H["Successfully logged in as {0}.", selectedUser.UserName]);
+        await _notifier.InformationAsync(H["Successfully logged in as <b>{0}</b>.", selectedUser.UserName]);
 
         return Redirect("~/");
     }
