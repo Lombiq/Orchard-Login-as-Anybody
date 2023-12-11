@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lombiq.LoginAsAnybody", "Lombiq.LoginAsAnybody\Lombiq.LoginAsAnybody.csproj", "{44C41A2B-9D65-4448-87E1-00256C60899C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lombiq.LoginAsAnybody.Tests.UI", "Lombiq.LoginAsAnybody.Tests.UI\Lombiq.LoginAsAnybody.Tests.UI.csproj", "{80B8DAC4-0D37-4CCD-AAA7-CFA7422399A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{44C41A2B-9D65-4448-87E1-00256C60899C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C41A2B-9D65-4448-87E1-00256C60899C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C41A2B-9D65-4448-87E1-00256C60899C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B8DAC4-0D37-4CCD-AAA7-CFA7422399A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B8DAC4-0D37-4CCD-AAA7-CFA7422399A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B8DAC4-0D37-4CCD-AAA7-CFA7422399A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B8DAC4-0D37-4CCD-AAA7-CFA7422399A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
