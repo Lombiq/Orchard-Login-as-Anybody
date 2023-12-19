@@ -21,4 +21,21 @@ public static class TestCaseUITestContextExtensions
 
         (await context.GetCurrentUserNameAsync()).ShouldBe(userParameters.UserName);
     }
+
+    public static async Task TestLoginAsAnybodyAuthorizationAsync(this UITestContext context)
+    {
+        var userParameters = UserRegistrationParameters.CreateDefault();
+        await context.CreateUserAsync(userParameters.UserName, userParameters.Password, userParameters.Email);
+
+        // The role needs this permission to visit the users page.
+        await context.AddPermissionToRoleAsync("ManageUsers", "Moderator");
+        await context.AddUserToRoleAsync(userParameters.UserName, "Moderator");
+
+        await context.SignInDirectlyAndGoToDashboardAsync(userParameters.UserName);
+        await context.GoToUsersAsync();
+
+        context.Missing(By.XPath("//a[contains(.,'Log in as user')]"));
+        await context.GoToAdminRelativeUrlAsync("/Users/SwitchUser/userId");
+        context.Exists(By.XPath("//h1[contains(text(),'You are not authorized to view this content.')]"));
+    }
 }
