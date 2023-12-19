@@ -9,9 +9,5 @@
     var user = Model.User as User;
 }
 
-@if (user.UserName != User.Identity.Name)
-{
-    <a asp-area="@LoginAsAnybody" asp-controller="UserSwitcher" asp-action="SwitchUser" asp-route-id="@user.UserId"
-       class="btn btn-success btn-sm">@T["Log in as user"]</a>
-}
-
+<a asp-area="@LoginAsAnybody" asp-controller="UserSwitcher" asp-action="SwitchUser" asp-route-id="@user.UserId"
+    class="btn btn-success btn-sm">@T["Log in as user"]</a>

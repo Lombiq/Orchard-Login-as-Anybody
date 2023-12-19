@@ -10,7 +10,7 @@
     <Title>Lombiq Login as Anybody for Orchard Core</Title>
     <Authors>Lombiq Technologies</Authors>
     <Copyright>Copyright © 2023, Lombiq Technologies Ltd.</Copyright>
-    <Description>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows administrators to log in as any user.</Description>
+    <Description>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows users with site owner permission to log in as any user.</Description>
     <PackageIcon>NuGetIcon.png</PackageIcon>
     <PackageTags>OrchardCore;Lombiq;AspNetCore</PackageTags>
     <RepositoryUrl>https://github.com/Lombiq/Orchard-Login-as-Anybody</RepositoryUrl>

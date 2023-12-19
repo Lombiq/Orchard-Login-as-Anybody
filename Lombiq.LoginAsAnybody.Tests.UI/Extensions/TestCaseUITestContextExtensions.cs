@@ -9,7 +9,7 @@ namespace Lombiq.LoginAsAnybody.Tests.UI.Extensions;
 
 public static class TestCaseUITestContextExtensions
 {
-    public static async Task TestLoginAsAnybodyAsync(this UITestContext context, bool checkBuildLink = false)
+    public static async Task TestLoginAsAnybodyAsync(this UITestContext context)
     {
         await context.SignInDirectlyAndGoToDashboardAsync();
 
