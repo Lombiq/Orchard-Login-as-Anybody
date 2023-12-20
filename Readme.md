@@ -1,5 +1,7 @@
 # Lombiq Login as Anybody for Orchard Core
 
+[![Lombiq.LoginAsAnybody NuGet](https://img.shields.io/nuget/v/Lombiq.LoginAsAnybody?label=Lombiq.LoginAsAnybody)](https://www.nuget.org/packages/Lombiq.LoginAsAnybody/) [![Lombiq.LoginAsAnybody.Tests.UI NuGet](https://img.shields.io/nuget/v/Lombiq.LoginAsAnybody.Tests.UI?label=Lombiq.LoginAsAnybody.Tests.UI)](https://www.nuget.org/packages/Lombiq.LoginAsAnybody.Tests.UI/)
+
 ## About
 
 Orchard Core module for administrators to be able to log in as any user. The Orchard 1 version of the module is available on the branch `dev-orchard-1`.

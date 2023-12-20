@@ -9,7 +9,7 @@
   <PropertyGroup>
     <Title>Lombiq Login as Anybody for Orchard Core</Title>
     <Authors>Lombiq Technologies</Authors>
-    <Copyright>Copyright © 2023, Lombiq Technologies Ltd.</Copyright>
+    <Copyright>Copyright © 2015, Lombiq Technologies Ltd.</Copyright>
     <Description>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows users with site owner permission to log in as any user.</Description>
     <PackageIcon>NuGetIcon.png</PackageIcon>
     <PackageTags>OrchardCore;Lombiq;AspNetCore</PackageTags>
@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <None Include="License.md" Pack="true" PackagePath="" />
+    <None Include="..\Readme.md" />
     <None Include="NuGetIcon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
