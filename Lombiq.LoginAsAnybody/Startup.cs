@@ -14,9 +14,11 @@ using System;
 
 namespace Lombiq.LoginAsAnybody;
 
-public class Startup(IOptions<AdminOptions> adminOptions) : StartupBase
+public class Startup : StartupBase
 {
-    private readonly AdminOptions _adminOptions = adminOptions.Value;
+    private readonly AdminOptions _adminOptions;
+
+    public Startup(IOptions<AdminOptions> adminOptions) => _adminOptions = adminOptions.Value;
 
     public override void ConfigureServices(IServiceCollection services) =>
         services.AddScoped<IDisplayDriver<User>, UserSwitcherDisplayDriver>();

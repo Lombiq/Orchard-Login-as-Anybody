@@ -10,11 +10,20 @@ using System.Threading.Tasks;
 
 namespace Lombiq.LoginAsAnybody.Drivers;
 
-public class UserSwitcherDisplayDriver(IHttpContextAccessor hca, IAuthorizationService authorizationService) : DisplayDriver<User>
+public class UserSwitcherDisplayDriver : DisplayDriver<User>
 {
+    private readonly IHttpContextAccessor _hca;
+    private readonly IAuthorizationService _authorizationService;
+
+    public UserSwitcherDisplayDriver(IHttpContextAccessor hca, IAuthorizationService authorizationService)
+    {
+        _hca = hca;
+        _authorizationService = authorizationService;
+    }
+
     public override async Task<IDisplayResult> DisplayAsync(User model, IUpdateModel updater) =>
-        await authorizationService.AuthorizeAsync(hca.HttpContext.User, StandardPermissions.SiteOwner) &&
-            hca.HttpContext.User.Identity.Name != model.UserName
+        await _authorizationService.AuthorizeAsync(_hca.HttpContext.User, StandardPermissions.SiteOwner) &&
+            _hca.HttpContext.User.Identity.Name != model.UserName
                 ? Initialize<SummaryAdminUserViewModel>("UserSwitcherButton", summaryModel => summaryModel.User = model)
                     .Location("SummaryAdmin", "Actions:2")
                 : null;
