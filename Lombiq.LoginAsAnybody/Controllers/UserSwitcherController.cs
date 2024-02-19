@@ -33,6 +33,8 @@ public class UserSwitcherController : Controller
         H = htmlLocalizer;
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> SwitchUser(string id)
     {
         if (!await _authorizationService.AuthorizeAsync(User, StandardPermissions.SiteOwner)) return Unauthorized();

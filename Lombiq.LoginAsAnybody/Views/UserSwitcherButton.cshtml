@@ -9,5 +9,9 @@
     var user = Model.User as User;
 }
 
-<a asp-area="@LoginAsAnybody" asp-controller="UserSwitcher" asp-action="SwitchUser" asp-route-id="@user.UserId"
-    class="btn btn-success btn-sm">@T["Log in as user"]</a>
+<form method="post" class="d-inline-block" class="no-multisubmit">
+    <input type="hidden" name="id" value="@user.UserId">
+    <button asp-area="@LoginAsAnybody" asp-controller="UserSwitcher" asp-action="SwitchUser" class="btn btn-success btn-sm">
+        @T["Log in as user"]
+    </button>
+</form>
