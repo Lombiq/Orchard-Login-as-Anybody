@@ -17,7 +17,7 @@ public static class TestCaseUITestContextExtensions
         await context.CreateUserAsync(userParameters.UserName, userParameters.Password, userParameters.Email);
 
         await context.GoToUsersAsync();
-        await context.ClickReliablyOnAsync(By.XPath("//button[contains(.,'Log in as user')]"));
+        await context.ClickReliablyOnAsync(By.XPath("//a[contains(.,'Log in as user')]"));
 
         (await context.GetCurrentUserNameAsync()).ShouldBe(userParameters.UserName);
     }
@@ -34,7 +34,7 @@ public static class TestCaseUITestContextExtensions
         await context.SignInDirectlyAndGoToDashboardAsync(userParameters.UserName);
         await context.GoToUsersAsync();
 
-        await context.ClickReliablyOnAsync(By.XPath("//button[contains(.,'Log in as user')]"));
+        await context.ClickReliablyOnAsync(By.XPath("//a[contains(.,'Log in as user')]"));
         context.Exists(By.XPath("//h1[contains(text(),'You are not authorized to view this content.')]"));
     }
 }

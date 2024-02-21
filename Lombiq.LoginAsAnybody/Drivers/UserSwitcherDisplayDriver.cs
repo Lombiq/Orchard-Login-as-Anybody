@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using OrchardCore.DisplayManagement.Handlers;
 using OrchardCore.DisplayManagement.ModelBinding;
@@ -11,13 +10,8 @@ namespace Lombiq.LoginAsAnybody.Drivers;
 public class UserSwitcherDisplayDriver : DisplayDriver<User>
 {
     private readonly IHttpContextAccessor _hca;
-    private readonly IAuthorizationService _authorizationService;
 
-    public UserSwitcherDisplayDriver(IHttpContextAccessor hca, IAuthorizationService authorizationService)
-    {
-        _hca = hca;
-        _authorizationService = authorizationService;
-    }
+    public UserSwitcherDisplayDriver(IHttpContextAccessor hca) => _hca = hca;
 
     public override IDisplayResult Display(User model, IUpdateModel updater) =>
         _hca.HttpContext.User.Identity.Name != model.UserName
