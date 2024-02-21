@@ -14,8 +14,8 @@ using static Lombiq.LoginAsAnybody.Constants.FeatureIds;
     Name = "Lombiq Login as Anybody",
     Category = "Security",
     Description = "Module that allows users with site owner permission to log in as any user.",
-    Dependencies = new[]
-    {
+    Dependencies =
+    [
         "OrchardCore.Users",
-    }
+    ]
 )]
