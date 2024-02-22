@@ -34,8 +34,7 @@ public static class TestCaseUITestContextExtensions
         await context.SignInDirectlyAndGoToDashboardAsync(userParameters.UserName);
         await context.GoToUsersAsync();
 
-        context.Missing(By.XPath("//a[contains(.,'Log in as user')]"));
-        await context.GoToAdminRelativeUrlAsync("/Users/SwitchUser/userId");
+        await context.ClickReliablyOnAsync(By.XPath("//a[contains(.,'Log in as user')]"));
         context.Exists(By.XPath("//h1[contains(text(),'You are not authorized to view this content.')]"));
     }
 }
