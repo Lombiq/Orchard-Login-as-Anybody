@@ -37,6 +37,8 @@ public class UserSwitcherController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> SwitchUser(string id)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
         if (!await _authorizationService.AuthorizeAsync(User, StandardPermissions.SiteOwner)) return Unauthorized();
 
         var selectedUser = await _userManager.FindByIdAsync(id);
