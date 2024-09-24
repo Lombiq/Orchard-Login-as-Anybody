@@ -6,7 +6,7 @@ using OrchardCore.Users.ViewModels;
 
 namespace Lombiq.LoginAsAnybody.Drivers;
 
-public class UserSwitcherDisplayDriver : DisplayDriver<User>
+public sealed class UserSwitcherDisplayDriver : DisplayDriver<User>
 {
     private readonly IHttpContextAccessor _hca;
 

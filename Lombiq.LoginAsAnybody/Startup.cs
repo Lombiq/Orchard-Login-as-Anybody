@@ -6,7 +6,7 @@ using OrchardCore.Users.Models;
 
 namespace Lombiq.LoginAsAnybody;
 
-public class Startup : StartupBase
+public sealed class Startup : StartupBase
 {
     public override void ConfigureServices(IServiceCollection services) =>
         services.AddScoped<IDisplayDriver<User>, UserSwitcherDisplayDriver>();

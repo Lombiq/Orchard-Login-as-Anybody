@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Lombiq.LoginAsAnybody.Controllers;
 
-public class UserSwitcherController : Controller
+public sealed class UserSwitcherController : Controller
 {
     private readonly IAuthorizationService _authorizationService;
     private readonly SignInManager<IUser> _signInManager;
