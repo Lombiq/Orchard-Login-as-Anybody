@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 
 namespace Lombiq.LoginAsAnybody.Controllers;
 
-[Admin]
-public class UserSwitcherController : Controller
+public sealed class UserSwitcherController : Controller
 {
     private readonly IAuthorizationService _authorizationService;
     private readonly SignInManager<IUser> _signInManager;
@@ -35,6 +34,7 @@ public class UserSwitcherController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [Admin("Users/SwitchUser/{id}", "UserSwitcher")]
     public async Task<IActionResult> SwitchUser(string id)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
