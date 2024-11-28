@@ -12,7 +12,7 @@ public sealed class Startup : StartupBase
 {
     public override void ConfigureServices(IServiceCollection services)
     {
-        services.AddScoped<IDisplayDriver<User>, UserSwitcherDisplayDriver>();
+        services.AddDisplayDriver<User, UserSwitcherDisplayDriver>();
         services.AddPermissionProvider<LoginAsAnybodyPermissions>();
     }
 }

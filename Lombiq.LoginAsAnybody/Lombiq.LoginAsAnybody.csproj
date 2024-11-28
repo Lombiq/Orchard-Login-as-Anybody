@@ -28,11 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Module.Targets" Version="2.0.0" />
-    <PackageReference Include="OrchardCore.Users" Version="2.0.0" />
-    <!-- This is only needed until the next Orchard Core upgrade because 8.0.4, referenced by OC 2.0.0, has
-    vulnerabilities. -->
-    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="2.1.0" />
+    <PackageReference Include="OrchardCore.Users" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(NuGetBuild)' != 'true'">
