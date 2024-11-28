@@ -54,7 +54,7 @@ public sealed class UserSwitcherController : Controller
 
         await _notifier.SuccessAsync(H["Successfully logged in as <b>{0}</b>.", selectedUser.UserName]);
 
-        _logger.LogInformation("User {UserName} logged in asr {SelectedUserName}.", User.Identity.Name, selectedUser.UserName);
+        _logger.LogInformation("User {UserName} logged in as {SelectedUserName}.", User.Identity.Name, selectedUser.UserName);
 
         return Redirect("~/");
     }
