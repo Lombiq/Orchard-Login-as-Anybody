@@ -10,7 +10,7 @@
     <Title>Lombiq Login as Anybody for Orchard Core</Title>
     <Authors>Lombiq Technologies</Authors>
     <Copyright>Copyright © 2015, Lombiq Technologies Ltd.</Copyright>
-    <Description>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows users with site owner permission to log in as any user.</Description>
+    <Description>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows administrator users to log in as any user.</Description>
     <PackageIcon>NuGetIcon.png</PackageIcon>
     <PackageTags>OrchardCore;Lombiq;AspNetCore</PackageTags>
     <RepositoryUrl>https://github.com/Lombiq/Orchard-Login-as-Anybody</RepositoryUrl>
@@ -28,11 +28,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Module.Targets" Version="2.0.0" />
-    <PackageReference Include="OrchardCore.Users" Version="2.0.0" />
-    <!-- This is only needed until the next Orchard Core upgrade because 8.0.4, referenced by OC 2.0.0, has
-    vulnerabilities. -->
-    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="2.1.0" />
+    <PackageReference Include="OrchardCore.Users" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(NuGetBuild)' != 'true'">
+    <ProjectReference Include="..\..\..\Libraries\Lombiq.HelpfulLibraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(NuGetBuild)' == 'true'">
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" Version="11.0.0" />
   </ItemGroup>
 
 </Project>
