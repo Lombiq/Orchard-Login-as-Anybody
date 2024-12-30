@@ -13,5 +13,5 @@ public static class Configurations
                 logEntries =>
                     OrchardCoreUITestExecutorConfiguration.AssertBrowserLogIsEmpty(
                         logEntries.Where(logEntry =>
-                            !logEntry.Message.ContainsOrdinalIgnoreCase("the server responded with a status of 401")));
+                            !logEntry.Text.ContainsOrdinalIgnoreCase("the server responded with a status of 401")));
 }
