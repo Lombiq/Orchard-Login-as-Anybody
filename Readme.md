@@ -6,6 +6,8 @@
 
 Orchard Core module for administrators to be able to log in as any user. The Orchard 1 version of the module is available on the branch `dev-orchard-1`.
 
+You can watch a demo video of the project [here](https://www.youtube.com/watch?v=UlZhblts1BI).
+
 ## Documentation
 
 After enabling the module you'll see a new button on the Security → Users page. You can log in as any registered user there. This is useful if you want to see how your Orchard Core app behaves for certain users.
