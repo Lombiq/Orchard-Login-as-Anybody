@@ -5,9 +5,10 @@
   </PropertyGroup>
 
   <Import Project="../../../Utilities/Lombiq.MSBuild.Targets/Lombiq.MSBuild.Module.Targets/Lombiq.MSBuild.Module.Targets.props"
-          Condition="'$(NuGetBuild)' != 'true' "/>
+          Condition="'$(NuGetBuild)' != 'true'" />
 
   <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
     <Title>Lombiq Login as Anybody for Orchard Core</Title>
     <Copyright>Copyright © 2015, Lombiq Technologies Ltd.</Copyright>
     <Description>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows administrator users to log in as any user.</Description>
@@ -21,6 +22,6 @@
   </ItemGroup>
 
   <Import Project="../../../Utilities/Lombiq.MSBuild.Targets/Lombiq.MSBuild.Module.Targets/Lombiq.MSBuild.Module.Targets.targets"
-          Condition="'$(NuGetBuild)' != 'true' "/>
+          Condition="'$(NuGetBuild)' != 'true'" />
 
 </Project>
