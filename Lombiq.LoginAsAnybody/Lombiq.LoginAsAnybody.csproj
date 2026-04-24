@@ -9,7 +9,7 @@
   <PropertyGroup>
     <Title>Lombiq Login as Anybody for Orchard Core</Title>
     <CopyrightYear>2015</CopyrightYear>
-    <DescriptionBody>Lombiq Login as Anybody for Orchard Core: An Orchard Core module that allows administrator users to log in as any user.</DescriptionBody>
+    <DescriptionBody>An Orchard Core module that allows administrator users to log in as any user.</DescriptionBody>
     <RepositoryUrl>https://github.com/Lombiq/Orchard-Login-as-Anybody</RepositoryUrl>
   </PropertyGroup>
 
