@@ -9,7 +9,7 @@
   <PropertyGroup>
     <Title>Lombiq Login as Anybody for Orchard Core - UI Test Extensions</Title>
     <CopyrightYear>2023</CopyrightYear>
-    <DescriptionBody>Lombiq Login as Anybody for Orchard Core - UI Test Extensions: Extensions to aid in UI testing Lombiq Login as Anybody for Orchard Core.</DescriptionBody>
+    <DescriptionBody>Extensions to aid in UI testing Lombiq Login as Anybody for Orchard Core.</DescriptionBody>
     <PackageTags>OrchardCore;Lombiq;AspNetCore</PackageTags>
     <RepositoryUrl>https://github.com/Lombiq/Orchard-Login-as-Anybody</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Lombiq/Orchard-Login-as-Anybody/tree/dev/Lombiq.LoginAsAnybody.Tests.UI</PackageProjectUrl>
