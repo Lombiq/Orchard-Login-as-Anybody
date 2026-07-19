@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Lombiq.LoginAsAnybody.Tests.UI/Lombiq.LoginAsAnybody.Tests.UI.csproj" />
+  <Project Path="Lombiq.LoginAsAnybody/Lombiq.LoginAsAnybody.csproj" />
+</Solution>
